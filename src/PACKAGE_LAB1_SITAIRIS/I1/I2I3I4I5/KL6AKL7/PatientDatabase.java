@@ -11,13 +11,14 @@ public class PatientDatabase implements PatientRecordManager<Patient>
 {
     private List<Patient> patients;
 
-    public PatientDatabase() {
-        patients = new ArrayList<Patient>();
+    public PatientDatabase(List<Patient> patients) {
+        this.patients = patients;
     }
 
     @Override
     public void displayInfo()
     {
+        System.out.println("Работает функция displayInfo класса PatientDatabase");
         System.out.println("=-------------------------=");
         for (Patient patient : patients)
         {

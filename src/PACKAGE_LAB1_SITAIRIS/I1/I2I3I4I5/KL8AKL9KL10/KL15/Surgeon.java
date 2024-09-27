@@ -20,6 +20,7 @@ public class Surgeon extends Doctor {
     @Override
     public void addMedicalRecord(Patient patient)
     {
+        System.out.println("Работает метод addMedicalRecord класса Surgeon");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите диагноз: ");
         String diagnosis = scanner.nextLine();
@@ -37,7 +38,7 @@ public class Surgeon extends Doctor {
 
     public void displayAllPatientRecords()
     {
-        displayMedicalRecords();
+        System.out.println("Работает метод displayAllPatientRecords класса Surgeon");displayMedicalRecords();
     }
 
     public void printPatientDetails()
@@ -63,6 +64,8 @@ public class Surgeon extends Doctor {
     @Override
     public String performOperation()
     {
-        return null;
+        System.out.println("Работает метод performOperation класса Surgeon");
+        System.out.println("Хирург успешно записан на конференцию!");
+        return "";
     }
 }

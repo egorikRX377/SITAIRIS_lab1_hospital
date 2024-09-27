@@ -15,6 +15,7 @@ public class InpatientRecordManager extends RecordManager
 
     @Override
     public void displayInfo() {
+        System.out.println("Работает метод displayInfo класса InpatientRecordManager");
         System.out.println("Имя записи: " + recordName);
         System.out.println("Пациент: " + patient);
         System.out.println("Детали: " + details);

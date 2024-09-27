@@ -10,7 +10,6 @@ public class BillingSystem implements PatientAdder, BillingManager
     @Override
     public void add(List<Patient> patients, Patient patient) {
         patients.add(patient);
-        System.out.println("Пациент успешно добавлен в систему бухгалтерии.");
     }
 
     @Override
@@ -24,7 +23,7 @@ public class BillingSystem implements PatientAdder, BillingManager
         {
             patient.setBills(0);
         }
-        System.out.println("Счет успешно обновлён для пациента: " + patient.getName());
+        System.out.println("Счет успешно закрыт для пациента: " + patient.getName());
     }
 
     @Override

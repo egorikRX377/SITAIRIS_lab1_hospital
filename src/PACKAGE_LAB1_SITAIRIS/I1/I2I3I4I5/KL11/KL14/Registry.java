@@ -10,7 +10,7 @@ public class Registry {
     private PatientCareManager patientCareManager;
     private BillingSystem billingSystem;
 
-    public Registry( List<Patient> patients, PatientCareManager patientCareManager, BillingSystem billingSystem)
+    public Registry( List<Patient> patients, BillingSystem billingSystem)
     {
         this.patients = patients;
         this.patientCareManager = new PatientCareManager(patients);
@@ -19,23 +19,25 @@ public class Registry {
 
     public void addPatientToBillingSystem(Patient patient)
     {
+        System.out.println("Работает метод addPatientToBillingSystem класса Registry");
         billingSystem.add(patients, patient);
         System.out.println("Пациент " + patient.getName() + " добавлен в систему бухгалтерии регистартуры.");
     }
 
     public void addPatientToDoctor(Doctor doctor, Patient patient)
     {
+        System.out.println("Работает метод addPatientToDoctor класса Registry");
         patientCareManager.add(doctor.getPatients(), patient);
     }
 
     public void closeBill(Patient patient, double value)
     {
-        billingSystem.BillOperation(patient, value);
+        System.out.println("Работает метод closeBill класса Registry");billingSystem.BillOperation(patient, value);
     }
 
     public void openBill(Patient patient, double value)
     {
-        patientCareManager.BillOperation(patient, value);
+        System.out.println("Работает метод openBill класса Registry");patientCareManager.BillOperation(patient, value);
     }
 
 }
